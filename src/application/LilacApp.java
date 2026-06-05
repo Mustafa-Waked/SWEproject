@@ -28,7 +28,12 @@ public class LilacApp extends Application {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		client = new LilacClient(args[0],args[1],3306);
+		if (args.length < 2) {
+			System.err.println("Usage: LilacApp <loginId> <serverHost>");
+			System.err.println("Example: LilacApp guest localhost");
+			System.exit(1);
+		}
+		client = new LilacClient(args[0], args[1], LilacClient.DEFAULT_PORT);
 		launch(args);
 	}
 }
