@@ -1,1 +1,26 @@
-/bin/
+# Build output
+bin/
+out/
+build/
+target/
+*.class
+
+# Eclipse
+.settings/
+.metadata/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Archives / generated
+*.rar
+*.zip
+*.jar
+*.war
+*.ear
+
+# OS
+.DS_Store
+Thumbs.db
